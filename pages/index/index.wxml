@@ -1,0 +1,164 @@
+<!--index.wxml-->
+<wxs module="func" src="../../utils/func.wxs" />
+<view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="swiperChange">
+        <block wx:for="{{web_sliderData.mainImg}}" wx:index="{{index}}" wx:key="id">
+          <swiper-item>
+            <image src="{{item.url}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      
+    </view>
+</view>
+<view class="search flex font28">
+    <input placeholder="请输入店名查询" bindinput="inputChange" class="color1"  data-key="item"></input>
+    <view class="search_btn flex" bindtap="intoPath" data-path="/pages/search/search?item={{web_sForm.item}}">
+      <view style="{{img}};background-position: -188px -60px;width:21px;height:21px;" ></view>
+    </view>
+</view>
+<view class="w710">
+  <view class="index_coach flexRowBetween">
+    <view class="coach_icon">
+      <view style="width:11px;height: 19px;{{img}};background-position: -232px 0px;"></view>
+    </view>
+    <view class="coach_list">
+    <scroll-view scroll-x class="scroll-header">
+      <block wx:for="{{web_labelData}}" wx:key="id">
+        <view class="coach_item" bindtap="intoPath" data-path="/pages/appointment/appointment?id={{item.id}}">
+            <view class="coach_img">
+                <view style="width:100%;height:190rpx;">
+                  <image src="{{item.mainImg[0].url}}"></image>
+                </view>
+                <view class="font30 avoidOverflow color1" style="height:40rpx;">{{item.title}}</view>
+               <view class="font24 avoidOverflow" style="height:34rpx;">{{item.description}}</view>
+            </view>
+        </view>
+      </block>
+    </scroll-view>
+    </view>
+  </view>
+</view>
+<view class="content_box w710">
+    <view class="bg">
+        <view class="title flex">
+            <view class="mall_tlt font30" style="{{img}};background-position:-126px -100px;">
+               热门卡
+            </view>
+        </view>
+      </view>
+        <block wx:for="{{web_productData}}" wx:key="id">
+          <view class="member" bindtap="intoPath" data-path="/pages/member_detail/member_detail?id={{item.id}}" >
+              <image src="{{item.member =='true'?'/images/member_bg.png':'/images/member_bg1.jpg'}}"></image>
+              <view class="member_cont w710">
+                  <view class="member_type flex">
+                      <view class="type_left">{{item.title}}</view>
+                      <view class="type_left type_right color2">¥{{item.price}}</view>
+                  </view>
+                  <view class="member_detail font28">{{item.description}}</view>
+                  <view class="date font26">
+                      <text>有效期</text><text>{{func.SecondToDate(item.standard)}}</text>
+                      <text>面值</text><text class="color2">{{item.balance}}</text>
+                  </view>
+              </view>
+          </view>
+        </block>
+    
+</view>
+<view class="content_box w710">
+    <view class="bg">
+        <view class="title flex">
+            <view class="mall_tlt font30" style="{{img}};background-position:-126px -100px;">
+               热门活动
+            </view>
+        </view>
+      </view>
+        <block wx:for="{{web_articleData}}" wx:key="id">
+          <view class="product flexRowBetween w710" bindtap="intoPath" data-path="/pages/index_relation_detail/index_relation_detail?id={{item.id}}">
+              <view class="product_box flexRowBetween">
+                  <view class="product_left">
+                      <image src="{{item.mainImg[0].url}}"></image>
+                  </view>
+                  <view class="product_right flexRowBetween">
+                      <view class="product_detail">
+                          <view class="font32 flexRowBetween" style="height:40%">
+                              <view class="product_name avoidOverflow color1">{{item.title}}</view>
+                              <view class="font24 product_date">{{item.create_time}}</view>
+                          </view>
+                          <view class="font28 avoidOverflow" style="height:60%;">{{item.description}}</view>
+                          
+                      </view>
+                  </view>
+              </view>
+          </view>
+        </block>
+    
+</view>
+<view class="w710">
+  <view class="recommend1 flexRowBetween">
+      <view class="recommend_left1 flex" bindtap="intoPath" data-path="/pages/member/member">
+        <image src="/images/index1.png" class="img_bg"></image>
+        <view class="activty flex">
+          <view class="activty_cont flex">
+            <view class="activty_left">
+               <view class="font32" style="text-align: center;width:100%;">VR会员</view>
+               <view class="font28 member_in">会员入驻</view>
+            </view>
+            <view class="activty_left">
+              <view class="activty_icon" style="{{img}};background-position:0 -100px;"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="recommend_left1 flex" bindtap="intoPath" data-path="/pages/index_relation/index_relation">
+        <image src="/images/index2.png" class="img_bg"></image>
+        <view class="activty flex">
+          <view class="activty_cont flex">
+            <view class="activty_left">
+               <view class="font32" style="text-align: center;width:100%;">相关内容</view>
+               <view class="font28 member_in">了解更多</view>
+            </view>
+            <view class="activty_left">
+              <view class="activty_icon" style="{{img}};background-position:-46px -100px;"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>
+<view class="content_box w710 ">
+    <view class="bg">
+        <view class="title flex">
+            <view class="mall_tlt font30" style="{{img}};background-position:-126px -100px;">
+               积分兑换
+            </view>
+            
+        </view>
+        <view class="flexRowBetween w710" style="flex-wrap: wrap">
+          <block wx:for="{{web_scoreData}}" wx:key="id">
+            <view class="recommend_left" bindtap="intoPath" data-path="/pages/index_detail/index_detail?id={{item.id}}">
+                <image src="{{item.mainImg[0].url}}"></image>
+                <view class="product_name1 font30 avoidOverflow color_this">{{item.title}}</view>
+                <view class="product_pro font28"><text class="color">{{item.price}}</text>积分</view>
+            </view>
+          </block>
+        </view>
+    </view>
+</view>
+<view class="font22 color6 copyright" style="text-align:center;"><text>版权所有：十一维时空</text><text> 技术支持：纯粹科技</text></view>
+<view style="width:100%;height:160rpx;"></view>
+<view class="navbar">
+    <view class="navbar_item" >
+        <view class="nav_img" style="{{img}};background-position:-29px -60px;"></view>
+        <view class="text this-text">首页</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/appointment/appointment?id={{web_labelData[0].id}}">
+        <view class="nav_img" style="{{img}};background-position:-56px -60px;"></view>
+        <view class="text">预约</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/user/user">
+        <view class="nav_img" style="{{img}};background-position:-108px -60px;"></view>
+        <view class="text">我的</view>
+    </view>
+</view>

@@ -1,0 +1,64 @@
+<!--index1.wxml-->
+<view class="w710">
+    <view class="appointment bg">
+        <image src="{{web_labelData.mainImg[0].url}}"></image>
+        <view class="vr_store w710 flex">
+            <view class="store__cont flex">
+                <view class="store_left">
+                    <view class="store_list flex">
+                        <view class="stroe_icon">
+                            <view style="width:17px;height:15px;{{img}};background-position: 0 0;margin:0 auto;"></view>
+                        </view>
+                        <view class="stroe_text font30">{{web_labelData.title}}</view>
+                    </view>
+                    <view class="store_list flex">
+                        <view class="stroe_icon">
+                            <view style="width:12px;height:15px;{{img}};background-position: -22px 0;margin:0 auto;"></view>
+                        </view>
+                        <view class="stroe_text font30 avoidOverflow">{{web_labelData.description}}</view>
+                    </view>
+                </view>
+                <view class="store_right" bindtap="intoPath" data-path="/pages/search/search">
+                    <view style="width:30px;height:30px;{{img}};background-position:-92px -100px;margin:0 auto;"></view>
+                    <view class="font28">切换店铺</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="w710">
+    <view class="appoint_cont">
+        <view class="appoint_tlt font30">VR项目</view>
+        <view class="w710 flexRowBetween" style="flex-wrap: wrap">
+          <block wx:for="{{web_mainData}}" wx:key="id">
+            <view class="recommend_left" bindtap="intoPath" data-path="/pages/detail/detail?id={{item.id}}">
+                <image src="{{item.mainImg[0].url}}"></image>
+                <view class="product_name1 font30 avoidOverflow">{{item.title}}</view>
+                <view class="product_pro font28"><text class="color">预约金：¥{{item.price}}</text></view>
+            </view>
+          </block>
+        </view>
+    </view>
+</view>
+
+<view class="select_box" wx:if="{{select}}">
+    <block wx:for="{{web_storeData}}" wx:key="id">
+        <view class="select_one" bindtap="mySelect" data-id="{{item.id}}">{{item.title}}</view>
+    </block>
+</view>
+<view class="font22 color6 copyright" style="text-align:center;"><text>版权所有：十一维时空</text><text> 技术支持：纯粹科技</text></view>
+<view style="width:100%;height:160rpx;"></view>
+<view class="navbar">
+    <view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+        <view class="nav_img" style="{{img}};background-position:-0px -60px;"></view>
+        <view class="text ">首页</view>
+    </view>
+    <view class="navbar_item" >
+        <view class="nav_img" style="{{img}};background-position:-83px -60px;"></view>
+        <view class="text" style="color:#3ab3c3">预约</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/user/user">
+        <view class="nav_img" style="{{img}};background-position:-108px -60px;"></view>
+        <view class="text">我的</view>
+    </view>
+</view>

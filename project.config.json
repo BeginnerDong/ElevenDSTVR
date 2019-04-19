@@ -1,0 +1,113 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.2",
+	"appid": "wxad11daecfd18e769",
+	"projectname": "VR",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "分类",
+					"pathName": "pages/appointment/appointment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的预约",
+					"pathName": "pages/user_order/user_order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "详情1",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约详情",
+					"pathName": "pages/appointment_detail/appointment_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "确认订单",
+					"pathName": "pages/confirm_order/confirm_order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "111",
+					"pathName": "pages/appointment/appointment",
+					"query": "id=106"
+				},
+				{
+					"id": -1,
+					"name": "我的卡",
+					"pathName": "pages/user_member/user_member",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "支付页面",
+					"pathName": "pages/appoint_detail/appoint_detail",
+					"query": "order_id=103&storeName=VR体验馆1"
+				},
+				{
+					"id": 11,
+					"name": "详情",
+					"pathName": "pages/detail/detail",
+					"query": "id=14"
+				}
+			]
+		}
+	}
+}

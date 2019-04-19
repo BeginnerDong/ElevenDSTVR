@@ -1,0 +1,77 @@
+<!--index1.wxml-->
+<wxs module="func" src="../../utils/func.wxs" />
+<view class="user_all font30 color3 w710">
+    <view class="w710 bg">
+        <view class="product flexRowBetween" bindtap="intoPath" data-path="/pages/appointment/appointment">
+          <view class="product_box flexRowBetween">
+              <view class="product_left">
+                  <image src="{{web_mainData.products[0].snap_product.product.mainImg[0].url}}"></image>
+              </view>
+              <view class="product_right flexRowBetween">
+                  <view class="product_detail">
+                      <view class="font32 avoidOverflow flex" style="height:50%">
+                        {{web_mainData.products[0].snap_product.product.title}}
+                      </view>
+                      <view class="font28  flex avoidOverflow" style="height:50%;overflow: hidden;">
+                        {{web_mainData.products[0].snap_product.product.description}}
+                      </view>
+                  </view>
+              </view>
+              <view class="product_last font28 color2">
+                  ¥{{web_mainData.price}}
+              </view>
+          </view>
+      </view>
+        <view class="user_infor flex">
+            <view class="account_left avoidOverflow">门店名称</view>
+            <view class="account_left account_right avoidOverflow">{{web_storeName}}</view>
+        </view>
+        <view class="user_infor flex">
+            <view class="account_left avoidOverflow">项目名称</view>
+            <view class="account_left account_right avoidOverflow">{{web_mainData.products[0].snap_product.product.title}}</view>
+        </view>
+        <view class="user_infor flex">
+            <view class="account_left avoidOverflow" style="width:25%;">预约时间</view>
+            <view class="account_left account_right" style="width:75%;">{{web_mainData.passage1}}</view>
+        </view>
+        <view class="user_infor flex" bindtap="test">
+            <view class="account_left">预约金</view>
+            <view class="account_left account_right">¥{{web_mainData.products[0].snap_product.reservaPrice}}</view>
+        </view>
+        <view class="user_infor" style="height: 180rpx; text-align:right;border: none;">
+             <view wx:if="{{web_pay.wxPay}}"><text class="color2">微信实付款¥{{web_pay.wxPay}}</text></view>
+             <view wx:if="{{web_pay.card.price||web_pay.card.price==0}}"><text class="color2">卡内余额支付¥{{web_pay.card.price}}</text></view>
+             <view wx:if="{{web_pay.other.price}}"><text class="color2">优惠抵扣金额¥{{web_pay.other.price}}</text></view>
+        </view>
+        
+    </view>
+
+    <view>可用会员卡</view>
+    <!--   <block wx:for="{{web_cardData}}" wx:key="id">
+    <view bindtap="chooseCard" data-index="{{index}}" style="{{web_index==index?'color:red':''}}">
+      名称:{{item.products[0].snap_product.title}}  剩余余额 :{{item.balance}} 折扣:{{item.discount/10}}折
+    </view> -->
+    
+    <block wx:for="{{web_cardData}}" wx:key="id">
+      <view class="member" style="{{web_index==index?'border:solid 1px #3ab3c3':'border:none'}}" bindtap="chooseCard" data-index="{{index}}" data-member="{{item.member}}">
+          <image src="{{item.member =='true'?'/images/member_bg.png':'/images/member_bg1.jpg'}}"></image>
+          <view class="member_cont w710">
+              <view class="member_type flex">
+                  <view class="type_left">{{item.products[0].snap_product.title}}</view>
+                  <view class="type_left type_right color2">余额：{{item.balance}}</view>
+              </view>
+              <view class="member_detail font28 flex">
+                <view class="color2 discount_num">{{item.discount/10}}</view>
+                <view class="text2">折</view>
+            </view>
+          </view>
+      </view>
+    </block>
+</view>
+<view style="width:100%;height:160rpx;"></view>
+<view class="confirm_btn flex font30">
+   <view class="confirm_left color2">{{web_isReserve?'预约金':''}}合计支付: ¥{{web_price}}</view> 
+   <button class="confirm_right color1 bg1"  bindgetuserinfo="{{!buttonClicked?'submit':''}}" open-type="getUserInfo" style="border-radius:0;font-size:30rpx;line-height:3.55555556">提交订单</button> 
+</view>
+
+
