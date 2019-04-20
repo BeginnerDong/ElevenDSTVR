@@ -1,0 +1,34 @@
+<view class="user_all font30 color3 w710">
+    <view class="w710">
+      <view class="user_infor flex">
+          <view class="account_left">姓名</view>
+          <view class="account_right">
+              <input placeholder="请输入姓名" />
+          </view>
+      </view>
+        <view class="user_infor flex">
+            <view class="account_left">性别</view>
+            <view class="account_right">
+				<radio-group class="radio-group" bindchange="radioChange">
+					<label class="radio" wx:for="{{items}}">
+						<radio value="{{item.name}}" checked="{{item.checked}}" color="#3AB3C3"/>
+						{{item.value}}
+					</label>
+				</radio-group>
+			</view>
+        </view>
+        <view class="user_infor flex">
+            <view class="account_left">联系电话</view>
+            <view class="account_right">
+                <input placeholder="请输入联系电话" />
+            </view>
+        </view>
+		<view class="user_infor flex">
+		    <view class="account_left">出生日期</view>
+		    <view class="account_right">
+		        <input placeholder="请输入出生日期" />
+		    </view>
+		</view>
+		<button class="btn_go">保存</button>
+    </view>
+</view>

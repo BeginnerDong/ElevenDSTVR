@@ -96,7 +96,7 @@ Page({
   intoPathRela(e){
     const self = this;
     api.pathTo(api.getDataSet(e,'path'),'rela');
-  },
+  }
 
 
 

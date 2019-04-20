@@ -150,3 +150,6 @@ button{
 .copyright text{
   	margin:0 12rpx;
   }
+  .fang{
+	  font-family: PingFangSC-Regular, sans-serif;
+  }

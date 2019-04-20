@@ -1,0 +1,41 @@
+<view class="w710">
+	<view class="staff_bulk" bindtap="intoPath" data-path="/pages/staff_info/staff_info">
+		<view class="staff_phont">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="staff_text staff_text1">
+			<view class="text1_name">
+				名称名称
+			</view>
+			<view class="text1_star">
+				<image src="../../images/icon1.png"></image>
+				<image src="../../images/icon1.png"></image>
+				<image src="../../images/icon1.png"></image>
+				<image src="../../images/icon1.png"></image>
+				<image src="../../images/icon2.png"></image>
+			</view>
+		</view>
+		<view class="staff_text staff_text2">
+			座右铭座右铭座右铭座右铭座右铭座右铭座右铭座右铭座右铭座右铭...
+		</view>
+	</view>
+</view>
+
+<view class="navbar">
+    <view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/index/index">
+        <view class="nav_img" style="{{img}};background-position:-0px -60px;"></view>
+        <view class="text">首页</view>
+    </view>
+    <view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/appointment/appointment?id={{web_labelData[0].id}}">
+        <view class="nav_img" style="{{img}};background-position:-56px -60px;"></view>
+        <view class="text">预约</view>
+    </view>
+	<view class="navbar_item">
+	    <view class="nav_img" style="background:url(../../images/navbar3_a.png) no-repeat;background-size:100% ;"></view>
+	    <view class="text this-text">员工</view>
+	</view>
+    <view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/user/user">
+        <view class="nav_img" style="{{img}};background-position:-108px -60px;"></view>
+        <view class="text">我的</view>
+    </view>
+</view>

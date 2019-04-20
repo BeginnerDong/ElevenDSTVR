@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/appointment/appointment",
+    "pages/staff/staff",
+    "pages/staff_info/staff_info",
     "pages/user/user",
     "pages/user_address/user_address",
     "pages/user_address_new/user_address_new",
@@ -10,6 +12,8 @@
     "pages/user_order/user_order",
     "pages/user_account/user_account",
     "pages/user_member/user_member",
+    "pages/user_favourable/user_favourable",
+    "pages/user_user/user_user",
     "pages/user_member_record/user_member_record",
     "pages/member/member",
     "pages/member_detail/member_detail",

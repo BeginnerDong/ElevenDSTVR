@@ -1,0 +1,42 @@
+.blackbox{
+	margin-top: 22rpx;
+	width: 710rpx;
+	height: 190rpx;
+	border-radius:15rpx ;
+	background: #262626;
+}
+.mnoey{
+	display: inline-block;
+	font-size: 50rpx;
+	color: #CCCCCC;
+	margin-top: 45rpx;
+}
+.mon-text{
+	display: inline-block;
+	font-size: 24rpx;
+	color: rgb(204,204,204);
+}
+.text2{
+	display: block;
+	text-align: center;
+	margin-top: 18rpx;
+}
+.text3{
+	padding-left:2.6%;
+	padding-right: 2.6%;
+	margin-top: 60rpx; 
+	line-break: 30rpx;
+	line-height: 40rpx;
+}
+.btn_go{
+	position: relative;
+	top: 440rpx;
+	background: #3AB3C3;
+	width: 538rpx;
+	height: 80rp;
+	color:#fff;
+	line-height: 80rpx;
+	text-align: center;
+	font-size: 32rpx;
+	border-radius:50rpx ;
+}

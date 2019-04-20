@@ -1,0 +1,200 @@
+.staff_phont{
+	width: 120rpx;
+	height: 120rpx;
+	position: relative;
+	margin: 50rpx auto 20rpx;
+	border-radius:50% ;
+	overflow: hidden;
+}
+
+.staff_name{
+	width: 100%;
+	text-align: center;
+	font-size: 28rpx;
+	color: rgb(201,201,201);
+}
+.info_content1{
+	margin: 48rpx 5rpx 50rpx;
+	font-size: 24rpx;
+	color: rgb(204,204,204);
+}
+.phont_row_box{
+	border: solid 10rpx #5C5C5C;
+	border-left: none;
+	border-right: none;
+	width: 100%;
+	
+}
+.phont_row_box button{
+	background: #3AB3C3;
+	width: 140rpx;
+	height: 60rpx;
+	font-size: 24rpx;
+	color: rgb(255,255,255);
+	margin-bottom: 30rpx;
+	border-radius: 40rpx;
+}
+.comment{
+	width: 100%;
+	font-size: 30rpx;
+	color: rgb(255,255,255);
+	margin-top: 50rpx;
+	}
+	.phont{
+		border-radius:50% ;
+	}
+	.phont80 image{
+		width: 80rpx;
+		height: 80rpx;
+	}
+	.phont80{
+		width: 80rpx;
+		height: 80rpx;
+	}
+.text233{
+	font-size: 26rpx;
+	color: rgb(233,233,233);
+}
+.phont_row_text{
+	padding: 30rpx 20rpx;
+	border-bottom: solid 1rpx #858585 ;
+}
+.inblock{
+	display: inline-block;
+}
+.name{
+	width:80 ;
+}
+.text-right{
+	display: inline-block;
+	width: 82%;
+	float: right;
+}
+.text1_star{
+	float: right;
+	height: 24rpx;
+	display: inline-block;
+	margin-left: 30rpx;
+}
+.text1_star image{
+	height: 19rpx;
+	width: 19rpx;
+	margin-right: 10rpx;
+}
+.text1_name{
+	color: rgb(201,201,201);
+	font-size: 28rpx;
+	display: inline-block;
+}
+.info_content2{
+	margin: 20rpx 10rpx;
+	font-size: 22rpx;
+	color: rgb(194,194,194);
+}
+.btn_go{
+	background: #3AB3C3;
+	width: 538rpx;
+	height: 80rp;
+	color:#fff;
+	line-height: 80rpx;
+	text-align: center;
+	font-size: 32rpx;
+	border-radius:50rpx ;
+	margin: 100rpx auto 70rpx;
+}
+
+
+.dashang{
+	border: solid 1rpx #fff;
+	position: fixed;
+	height:530rpx;
+	width: 660rpx;
+	border-radius:20rpx ;
+	background-color: #fff;
+	z-index: 5;
+	top: 300rpx;
+	left:45rpx;
+}
+.fixd_text{
+	width: 100%;
+	font-size: 32rpx;
+	color: rgb(33,33,33);
+	text-align: center;
+	margin-top: 80rpx;
+}
+.dashang input{
+	width: 560rpx;
+	height: 80rpx;
+	background:#DEDEDE;
+	color: rgb(153,153,153);
+	text-align: center;
+	margin: 60rpx auto;
+}
+.dashang button{
+	width: 538rpx;
+	height: 80rpx;
+	background: #3AB3C3;
+	color: #fff;
+	font-size: 32rpx;
+	margin-top:40rpx ;
+	border-radius:40rpx ;
+}
+.close1{
+	position: absolute;
+	top: 10px;
+	left:600rpx ;
+	border: solid 1rpx #ABABAB;
+	width: 40rpx;
+	height: 40rpx;
+	border-radius:50% ;
+	
+	background-size:100% ;
+}
+.fid_comment{
+	border: solid 1rpx #fff;
+	position: fixed;
+	height:836rpx;
+	width: 660rpx;
+	border-radius:20rpx ;
+	background-color: #fff;
+	z-index: 5;
+	top: 140rpx;
+	left:45rpx;
+}
+.fid_comment button{
+	width: 538rpx;
+	height: 80rpx;
+	background: #3AB3C3;
+	color: #fff;
+	font-size: 32rpx;
+	margin-top:40rpx ;
+	border-radius:40rpx ;
+}
+textarea {
+  font-size: 24rpx;
+  margin: 90rpx 30rpx;
+  background-color: rgb(222,222,222);
+  color: rgb(153,153,153);
+  width: 560rpx;
+  height: 300rpx;
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+}
+.fid_text{
+	width: 100%;
+	font-size: 28rpx;
+	color: rgb(54,54,54);
+	margin-top: 40rpx;
+}
+.fid_text view{
+	display: inline-block;
+}
+.fid_text image{
+	width: 20rpx;
+	height: 20rpx;
+	margin-right: 20rpx;
+	
+}
+
+
+

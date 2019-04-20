@@ -22,7 +22,7 @@
         </view>
         <view class="user_infor flex"   bindtap="intoPath" data-path="/pages/user_account/user_account">
             <view class="user_icon" style="{{img}};background-position: -40px -28px;width:18px"></view>
-            <text>账户信息</text>
+            <text>微信信息</text>
         </view>
         <view class="user_infor flex" style="border: none;" bindtap="intoPath" data-path="/pages/user_member/user_member">
             <view class="user_icon" style="{{img}};background-position: -62px -30px;"></view>
@@ -47,8 +47,20 @@
             <text>收货地址</text>
         </view>
     </view>
+	<view class="w710 bg" style="margin-bottom: 100rpx;">
+	    <view class="user_infor flex"  bindtap="intoPath" data-path="/pages/user_user/user_user">
+	        <view class="user_icon" style="background: url(../../images/abous-icon01.png) no-repeat; background-size:100% ;"></view>
+	        <text>个人信息</text>
+	    </view>
+		<view class="user_infor flex" style="border: none;" bindtap="intoPath"  data-path="/pages/user_favourable/user_favourable">
+		    <view class="user_icon" style="background: url(../../images/abous-icon02.png) no-repeat; background-size:100% ;"></view>
+		    <text>优惠权益</text>
+		</view>
+	        
+	</view>
 </view>
 <view class="font22 color6 copyright" style="text-align:center;"><text>版权所有：十一维时空</text><text> 技术支持：纯粹科技</text></view>
+
 <view class="navbar">
     <view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/index/index">
         <view class="nav_img" style="{{img}};background-position:-0px -60px;"></view>
@@ -58,6 +70,10 @@
         <view class="nav_img" style="{{img}};background-position:-56px -60px;"></view>
         <view class="text">预约</view>
     </view>
+	<view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/staff/staff">
+	     <view class="nav_img" style="background: url(../../images/navbar3.png) no-repeat 0rpx; background-size:100% ;"></view>
+	    <view class="text">员工</view>
+	</view>
     <view class="navbar_item">
         <view class="nav_img" style="{{img}};background-position:-135px -60px;"></view>
         <view class="text this-text">我的</view>

@@ -157,6 +157,10 @@
         <view class="nav_img" style="{{img}};background-position:-56px -60px;"></view>
         <view class="text">预约</view>
     </view>
+	<view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/staff/staff">
+	    <view class="nav_img" style="background: url(../../images/navbar3.png) no-repeat 0rpx; background-size:100% ;"></view>
+	    <view class="text">员工</view>
+	</view>
     <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/user/user">
         <view class="nav_img" style="{{img}};background-position:-108px -60px;"></view>
         <view class="text">我的</view>

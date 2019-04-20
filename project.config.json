@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
 	"appid": "wxad11daecfd18e769",
-	"projectname": "VR",
+	"projectname": "ElevenDSTVR",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -106,6 +106,41 @@
 					"name": "详情",
 					"pathName": "pages/detail/detail",
 					"query": "id=14"
+				},
+				{
+					"id": -1,
+					"name": "1111",
+					"pathName": "pages/staff_info/staff_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "员工信息",
+					"pathName": "pages/staff_info/staff_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠权益",
+					"pathName": "pages/user_favourable/user_favourable",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "员工信息",
+					"pathName": "pages/staff_info/staff_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人信息",
+					"pathName": "pages/user_user/user_user"
 				}
 			]
 		}

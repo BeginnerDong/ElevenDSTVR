@@ -1,0 +1,90 @@
+<view class="w710">
+	<view class="staff_phont" style="background: url(../../images/img.png) no-repeat; background-size:100% ;">
+		<!-- <image style="background: url(../../images/img.png) no-repeat; background-size:100% ;" ></image> -->
+	</view>
+	<view class="staff_name">
+		名称名称名称
+	</view>
+	<view class="info_content1 ">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="phont_row_box">
+		<view class="phont_row">
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+			<image src="../../images/img.png" style="width: 80rpx; height:80rpx ; margin: 30rpx 11rpx 40rpx;"></image>
+		</view>
+		<button bindtap="show">打赏</button>
+	</view>
+	<view class="comment">
+		用户评论
+	</view>
+	<block wx:for="{{web_comment}}" wx:key="id">
+		<view class="phont_row_text">
+			<view class="phont phont80 inblock" style="margin: 30rpx 10rpx;">
+				<image src="../../images/img.png"></image>
+			</view>
+			<view class="text-right">
+				<view class="text1_name">
+					名称名称
+				</view>
+				<view class="text1_star">
+					<image src="../../images/icon1.png"></image>
+					<image src="../../images/icon1.png"></image>
+					<image src="../../images/icon1.png"></image>
+					<image src="../../images/icon1.png"></image>
+					<image src="../../images/icon2.png"></image>
+				</view>
+				<view class="info_content2">
+					内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+				</view>	
+			</view>
+		</view>
+	</block>
+	<button class="btn_go" bindtap="showTwo">去评论</button>
+	
+	<view class="dashang" wx:if="{{isShow}}">
+		<view class="fixd_text">打赏金额</view>
+		<input placeholder="请输入打赏金额" style="font-size: 24rpx;" />
+		<button>确定</button>
+		<view class="close1" bindtap="show"></view>
+	</view>
+	
+	<view class="fid_comment" wx:if="{{isShowTwo}}">
+		<textarea placeholder="对他的评价......(选填)">
+		</textarea>
+		<view class="fid_text">
+			<view style="margin-left: 50rpx;">服务热情</view>
+			<view style="margin-left: 50rpx;">
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+			</view>
+		</view>
+		<view class="fid_text">
+			<view style="margin-left: 50rpx;">专业技能</view>
+			<view style="margin-left: 50rpx;">
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+			</view>
+		</view>
+		<view class="fid_text">
+			<view style="margin-left: 50rpx;">响应速度</view>
+			<view style="margin-left: 50rpx;">
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+				<image src="../../images/icon3.png"></image>
+			</view>
+		</view>
+		<button>确定</button>
+		<view class="close1" bindtap="showTwo"></view>
+	</view>
+</view>
