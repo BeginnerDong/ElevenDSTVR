@@ -74,7 +74,7 @@ var getArrayByTarget = function(array,targetName,target){
   }; 
   var results = [];
   getItemsBytarget(array,targetName,target);
-  console.log('222',results)
+
   return results;   
   
 };

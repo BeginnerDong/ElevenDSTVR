@@ -41,7 +41,8 @@ Page({
       withShareTicket: true
     });
     self.data.selectData = new Date(new Date().toLocaleDateString()).getTime();
-    console.log('self.data.selectData',self.data.selectData)
+    console.log('self.data.selectData',self.data.selectData);
+		self.checkSpecial();
     self.getMainData();
     self.data.hour = new Date().getHours();  
     self.data.minutes = new Date().getMinutes();
@@ -54,6 +55,23 @@ Page({
       img:app.globalData.img
     });
   },
+	
+	checkSpecial() {
+		const self = this;
+		const postData = {};
+		postData.token = wx.getStorageSync('token');
+		const callback = (res) => {
+			if (res.solely_code == 100000) {
+				self.data.specialData = res
+			}
+			self.setData({
+				web_specialData: self.data.specialData
+			});
+			console.log(self.data.specialData)
+			self.getMainData();
+		};
+		api.checkSpecial(postData, callback);
+	},
 
   swiperChange(e) {
     const self = this;

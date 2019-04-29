@@ -1,11 +1,20 @@
 <view class="user_all font30 color3 w710 fang">
 	<view class="blackbox" style="text-align: center;">
-		<view class="mnoey">596.26</view>
+		<view class="mnoey" bindtap="test">{{web_specialData.msg.consume}}</view>
 		<view class="mon-text">元</view>
 		<view class="mon-text text2">消费金额</view>
 	</view>
+	<view class="mon-text text3" wx:if="{{web_specialData.msg.special=='false'&&standard-web_specialData.msg.consume>0}}">
+		本周期消费满{{standard}}元，每日可享受2次特惠权益折扣，您已消费{{web_specialData.msg.consume}}元，还差{{standard-web_specialData.msg.consume}}元即可享受权益。
+	</view>
+	<view class="mon-text text3" wx:if="{{web_specialData.msg.special=='false'&&web_specialData.msg.discount_num - web_specialData.msg.count==0}}">
+		本周期内可享受{{discount_num}}次特惠权益折扣,您已享受{{web_specialData.msg.count}}次。
+	</view>
+	<view class="mon-text text3" wx:if="{{web_specialData.msg.special=='true'}}">
+		本周期消费满{{standard}}元，每日可享受2次权益折扣，您已达到权益标准，本周期权益折扣还剩{{web_specialData.msg.discount_num - web_specialData.msg.count}}次，请尽快使用，期限到自动清零。
+	</view>
 	<view class="mon-text text3">
-		您已达到权益标准，本周期权益折扣还剩32次，请尽快使用，期限到自动清零。
+		本周期还剩<view class="mnoey">{{web_specialData.msg.restDay}}</view>天
 	</view>
 	<button class="btn_go">去预约</button>
 </view>

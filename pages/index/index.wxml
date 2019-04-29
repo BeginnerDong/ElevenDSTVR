@@ -49,7 +49,7 @@
         </view>
       </view>
         <block wx:for="{{web_productData}}" wx:key="id">
-          <view class="member" bindtap="intoPath" data-path="/pages/member_detail/member_detail?id={{item.id}}" >
+          <view class="member" bindtap="intoCardDetail" data-price="{{item.price}}" data-path="/pages/member_detail/member_detail?id={{item.id}}" >
               <image src="{{item.member =='true'?'/images/member_bg.png':'/images/member_bg1.jpg'}}"></image>
               <view class="member_cont w710">
                   <view class="member_type flex">

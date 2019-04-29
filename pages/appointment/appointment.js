@@ -21,11 +21,29 @@ Page({
     self.data.id = options.id;
     self.getLabelData();
     self.getMainData();
-    self.getStoreData()
+    self.getStoreData();
+		self.checkSpecial();
     self.setData({
       img:app.globalData.img
     })
   },
+	
+	checkSpecial() {
+		const self = this;
+		const postData = {};
+		postData.token = wx.getStorageSync('token');
+		const callback = (res) => {
+			if (res.solely_code == 100000) {
+				self.data.specialData = res
+			}
+			self.setData({
+				web_specialData: self.data.specialData
+			});
+			console.log(self.data.specialData)
+			self.getMainData();
+		};
+		api.checkSpecial(postData, callback);
+	},
 
   getStoreData(){
     const self = this;

@@ -216,7 +216,20 @@ Page({
     });  
     console.log(self.data.sForm)
   },
+	
 
+	
+	intoCardDetail(e){
+	  const self = this;
+		var price = api.getDataSet(e,'price');
+		if(price>0){
+			api.pathTo(api.getDataSet(e,'path'),'nav');
+		}else{
+			api.showToast('不支持购买','none')
+		}
+	  
+	},
+	
   intoPath(e){
     const self = this;
     api.pathTo(api.getDataSet(e,'path'),'nav');

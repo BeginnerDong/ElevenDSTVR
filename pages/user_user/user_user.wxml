@@ -3,32 +3,48 @@
       <view class="user_infor flex">
           <view class="account_left">姓名</view>
           <view class="account_right">
-              <input placeholder="请输入姓名" />
+              <input placeholder="请输入姓名" data-key="name" value="{{web_sForm.name}}" bindblur="changeBind"/>
           </view>
       </view>
         <view class="user_infor flex">
             <view class="account_left">性别</view>
-            <view class="account_right">
-				<radio-group class="radio-group" bindchange="radioChange">
-					<label class="radio" wx:for="{{items}}">
-						<radio value="{{item.name}}" checked="{{item.checked}}" color="#3AB3C3"/>
-						{{item.value}}
-					</label>
-				</radio-group>
+            <view class="account_right" style="display: flex;">
+				<view data-value="1" data-key="gender" bindtap="changeBind" style="display:flex;align-items:center">
+					<image src="{{web_sForm.gender=='1'?'/images/select_active.png':'/images/select.png'}}" style="width:40rpx;height:40rpx;margin-right:10rpx;" ></image>
+					<view class="font28" style="{{web_sForm.gender=='1'?'color:#21c3d4':''}}">男</view>
+				</view>
+				
+				<view data-value="2" data-key="gender" bindtap="changeBind" style="display:flex;margin-left:80rpx;align-items:center">
+					<image src="{{web_sForm.gender=='2'?'/images/select_active.png':'/images/select.png'}}" style="width:40rpx;height:40rpx;margin-right:10rpx" ></image>
+					<view class="font28" style="{{web_sForm.gender=='2'?'color:#21c3d4':''}}">女</view>
+				</view>
 			</view>
         </view>
         <view class="user_infor flex">
             <view class="account_left">联系电话</view>
             <view class="account_right">
-                <input placeholder="请输入联系电话" />
+                <input placeholder="请输入联系电话" data-key="phone" value="{{web_sForm.phone}}" bindblur="changeBind"/>
             </view>
         </view>
 		<view class="user_infor flex">
 		    <view class="account_left">出生日期</view>
-		    <view class="account_right">
-		        <input placeholder="请输入出生日期" />
-		    </view>
+		    <picker mode="date"  start="1970-01-01" end="2019-01-01" bindchange="bindDateChange" style="width:100%;">
+			 <view class="account_right flexRowBetween font28">
+			    <view class="thing1  flexRowBetween" style="width:35%;text-align: center;">
+			        <view class="font28"  style="text-align: center;width:100%;">{{web_sForm.passage_array[0]}}</view>
+			    </view>
+			    <view class="years font28 ">年</view>
+			    <view class="thing1  flexRowBetween"  style="width:24%;text-align: center;">
+			        <view class="font28"  style="text-align: center;width:100%;">{{web_sForm.passage_array[1]}}</view>
+			    </view>
+			     <view class="years font28">月</view>
+			    <view class="thing1  flexRowBetween"  style="width:24%;text-align: center;">
+			        <view class="font28" style="text-align: center;width:100%;">{{web_sForm.passage_array[2]}}</view>
+			    </view>
+			     <view class="years font28 ">日</view>
+			</view>
+			</picker>
 		</view>
-		<button class="btn_go">保存</button>
+		<button class="btn_go" bindgetuserinfo="submit" open-type="getUserInfo">保存</button>
     </view>
 </view>

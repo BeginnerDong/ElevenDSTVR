@@ -22,6 +22,7 @@ radio {
 	line-height:78rpx;
 	border-bottom:solid 1px #dcdcdc;
 	align-items:center;
+	width:100%
 	}
 .user_right {
 	border: solid 1rpx red;
@@ -32,10 +33,10 @@ radio {
 	margin-top:12rpx;
 }
 .account_left{
-	width:50%;
+	width:25%;
 }
 .account_right{
-	width:145%;
+	width:75%;
 }
 .account_img{
 	width:116rpx;

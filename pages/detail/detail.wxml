@@ -77,10 +77,17 @@
 						<view class="color2">非会员价:￥{{web_skuData.price?web_skuData.price:'0.00'}}|
 						</view>
 						<view class="color2">
-							会员价:{{web_skuData.vipPrice?web_skuData.vipPrice:'0.00'}}元
+							会员价:{{web_skuData.vipPrice?web_skuData.vipPrice:'0.00'}}|
+						</view>
+						<view class="color2" wx:if="{{web_specialData.msg.special=='true'}}">
+							特惠价:{{web_skuData.specialPrice?web_skuData.specialPrice:'0.00'}}
 						</view>
 					</view>
-					<view class="font26 color2">预约金:{{web_skuData.reservaPrice?web_skuData.reservaPrice:web_mainData.price}}</view>
+					<view class=" flex">
+						<view class="font26 color2">预约金:{{web_skuData.reservaPrice?web_skuData.reservaPrice:web_mainData.price}}|</view>
+						<view class="font26 color2" wx:if="{{web_specialData.msg.special=='true'}}">特惠预约金:{{web_skuData.specialReservaPrice?web_skuData.specialReservaPrice:web_mainData.price}}</view>
+					</view>
+					
 				</view>
 				<view class="close" bindtap="close">
 				<view style="width:19px;height:19px;{{img}};background-position:-270px 0;"></view>

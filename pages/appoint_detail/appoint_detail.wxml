@@ -18,7 +18,7 @@
                   </view>
               </view>
               <view class="product_last font28 color2">
-                  ¥{{web_mainData.price}}
+                  ¥{{web_specialData.msg.sepcial=='false'?web_mainData.price:web_mainData.sepcialPrice}}
               </view>
           </view>
       </view>

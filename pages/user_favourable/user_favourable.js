@@ -1,65 +1,75 @@
+import {
+	Api
+} from '../../utils/api.js';
+var api = new Api();
+const app = getApp();
+import {
+	Token
+} from '../../utils/token.js';
+const token = new Token();
+
 Page({
+	data: {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    
-  },
+		specialData: []
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
+	},
+	//事件处理函数
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
+	onLoad() {
+		const self = this;
+		wx.showLoading();
+		self.checkSpecial();
+		self.setData({
+			standard:parseInt(wx.getStorageSync('info').thirdApp.custom_rule.standard),
+			period:parseInt(wx.getStorageSync('info').thirdApp.custom_rule.period),
+			discount_num:parseInt(wx.getStorageSync('info').thirdApp.custom_rule.discount_num),
+			img: app.globalData.img
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
+	checkSpecial() {
+		const self = this;
+		const postData = {};
+		postData.token = wx.getStorageSync('token');
+		const callback = (res) => {
+			if (res.solely_code == 100000) {
+				self.data.specialData = res
+			}
+			
+			self.setData({
+				web_specialData: self.data.specialData
+			});
+			console.log(self.data.specialData)
+			wx.hideLoading();
+		};
+		api.checkSpecial(postData, callback);
+	},
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
+	test(){
+		const self = this;
+		const postData ={
+			token:wx.getStorageSync('token'),
+			data:{
+				user_no: wx.getStorageSync('info').user_no,
+				type:6,
+				thirdapp_id:2,
+				user_type:0,
+				count:-1000
+			}
+			
+		};
+		const callback = (res) => {
+		
+		};
+		api.flowLogAdd(postData, callback);
+	}
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
+	/**
+	 * 生命周期函数--监听页面初次渲染完成
+	 */
+
 })

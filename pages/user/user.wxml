@@ -52,7 +52,7 @@
 	        <view class="user_icon" style="background: url(../../images/abous-icon01.png) no-repeat; background-size:100% ;"></view>
 	        <text>个人信息</text>
 	    </view>
-		<view class="user_infor flex" style="border: none;" bindtap="intoPath"  data-path="/pages/user_favourable/user_favourable">
+		<view class="user_infor flex" style="border: none;" bindtap="intoQy"  data-path="/pages/user_favourable/user_favourable">
 		    <view class="user_icon" style="background: url(../../images/abous-icon02.png) no-repeat; background-size:100% ;"></view>
 		    <text>优惠权益</text>
 		</view>
