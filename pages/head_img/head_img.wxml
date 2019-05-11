@@ -1,0 +1,58 @@
+<view class="w710">
+	<view class="list" style="border-bottom: solid 1rpx #666666;">
+		<view class="head inblock">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="name">
+			昵称昵称
+		</view>
+	</view>
+	<view class="num">1254人打赏</view>
+</view>
+<view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+		<view class="smbox">
+			<image src="../../images/img.png"></image>
+		</view>
+	</view>

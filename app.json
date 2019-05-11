@@ -25,7 +25,8 @@
     "pages/index_relation/index_relation",
     "pages/index_relation_detail/index_relation_detail",
     "pages/index_detail1/index_detail1",
-    "pages/cashFlow/cashFlow"
+    "pages/cashFlow/cashFlow",
+		"pages/head_img/head_img"
   ],
   "window": {
     "backgroundTextStyle": "light",

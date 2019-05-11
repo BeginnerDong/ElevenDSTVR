@@ -17,7 +17,7 @@ Page({
 		isShow: false,
 		isShowTwo: false,
 		messageData: [],
-		orderItemData:[],
+		orderItemData: [],
 		submitData: {
 			gender: '',
 			class: '',
@@ -87,9 +87,9 @@ Page({
 		const postData = {};
 		postData.token = wx.getStorageSync('token');
 		postData.searchItem = {
-			
-			product_id:self.data.id,
-			pay_status:1
+
+			product_id: self.data.id,
+			pay_status: 1
 		};
 		postData.getAfter = {
 			user: {
@@ -118,7 +118,7 @@ Page({
 
 	getMessageData(isNew) {
 		const self = this;
-		console.log('111',self.data.mainData.product_no)
+		console.log('111', self.data.mainData.product_no)
 		if (isNew) {
 			api.clearPageIndex(self)
 		};
@@ -126,8 +126,8 @@ Page({
 		postData.paginate = api.cloneForm(self.data.paginate);
 		postData.token = wx.getStorageSync('token');
 		postData.searchItem = {
-			product_no:self.data.product_no,
-			user_type:0	
+			product_no: self.data.product_no,
+			user_type: 0
 		};
 		postData.getAfter = {
 			user: {
@@ -169,7 +169,7 @@ Page({
 
 	checkLoadComplete() {
 		const self = this;
-		var complete = api.checkArrayEqual(self.data.complete_api, ['getMainData', 'getMessageData','getOrderItemData']);
+		var complete = api.checkArrayEqual(self.data.complete_api, ['getMainData', 'getMessageData', 'getOrderItemData']);
 		if (complete) {
 			wx.hideLoading();
 		};
@@ -358,5 +358,13 @@ Page({
 
 	},
 
+	intoPathRedi(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
 
 })

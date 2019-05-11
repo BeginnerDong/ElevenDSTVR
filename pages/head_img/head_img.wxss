@@ -1,0 +1,42 @@
+.list{
+	padding: 3% 4%;
+	
+}
+.head{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+}
+.head image{
+	width: 100%;
+	height: 100%;
+}
+.name{
+	display: inline-block;
+	font-size: 30rpx;
+	color: #fff;
+	margin-left: 5%;
+	position: relative;
+	top: -30rpx;
+}
+.num{
+	text-align: center;
+	box-sizing: border-box;
+	padding: 10rpx 0rpx;
+	font-size: 24rpx;
+	color: #666666;
+	}
+.smbox{
+	width: 50rpx;
+	height: 50rpx;
+	display: inline-block;
+	overflow: hidden;
+	margin-top: 15rpx;
+	margin-left:3%;
+}
+.smbox image{
+	width: 100%;
+	height: 100%;
+}

@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -148,7 +148,19 @@
 				{
 					"id": -1,
 					"name": "评论",
-					"pathName": "pages/staff_info/staff_info"
+					"pathName": "pages/staff_info/staff_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "员工",
+					"pathName": "pages/staff_info/staff_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "打赏",
+					"pathName": "pages/head_img/head_img"
 				}
 			]
 		}
