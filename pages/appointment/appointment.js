@@ -20,7 +20,7 @@ Page({
     self.data.paginate = api.cloneForm(getApp().globalData.paginate);
     self.data.id = options.id;
     self.getLabelData();
-    self.getMainData();
+    
     self.getStoreData();
 		self.checkSpecial();
     self.setData({

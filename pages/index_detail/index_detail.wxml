@@ -35,7 +35,7 @@
 <view id="buy">
 	<view class="buy_click">
 		<view class="consult collect" style="width:20%;" data-path="/pages/index/index" bindtap="intoPathRedi">
-			<view style="width:19px;height:17px;{{img}};background-position: -88px 0px;margin:0 auto;" ></view>
+			<view style="width:19px;height:17px;background-position: -88px 0px;margin:0 auto;" class="sprite"></view>
 			<view class="font28">返回首页</view>
 		</view>
 		<view class="go_buy flexRowBetween" >

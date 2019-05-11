@@ -22,11 +22,11 @@
 <view class="user_all font30 color3 w710">
     <view class="w710 bg">
         <view class="user_infor flex"  bindtap="intoPath" data-path="/pages/member/member">
-            <view class="user_icon" style="{{img}};background-position: -122px -27px;"></view>
+            <view class="user_icon sprite" style="background-position: -122px -27px;"></view>
             <text>会员充值</text>
         </view>
         <view class="user_infor flex" bindtap="intoPath" data-path="/pages/user_member_record/user_member_record" style="border: none;">
-            <view class="user_icon" style="{{img}};background-position: -144px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: -144px -30px;"></view>
             <text>流水记录</text>
         </view>
     </view>

@@ -15,13 +15,13 @@
 <view class="search flex font28">
     <input placeholder="请输入店名查询" bindinput="inputChange" class="color1"  data-key="item"></input>
     <view class="search_btn flex" bindtap="intoPath" data-path="/pages/search/search?item={{web_sForm.item}}">
-      <view style="{{img}};background-position: -188px -60px;width:21px;height:21px;" ></view>
+      <view class="sprite" style="background-position: -188px -60px;width:21px;height:21px;" ></view>
     </view>
 </view>
 <view class="w710">
   <view class="index_coach flexRowBetween">
     <view class="coach_icon">
-      <view style="width:11px;height: 19px;{{img}};background-position: -232px 0px;"></view>
+      <view style="width:11px;height: 19px;background-position: -232px 0px;" class="sprite"></view>
     </view>
     <view class="coach_list">
     <scroll-view scroll-x class="scroll-header">
@@ -43,7 +43,7 @@
 <view class="content_box w710">
     <view class="bg">
         <view class="title flex">
-            <view class="mall_tlt font30" style="{{img}};background-position:-126px -100px;">
+            <view class="mall_tlt font30 sprite" style="background-position:-126px -100px;">
                热门卡
             </view>
         </view>
@@ -69,7 +69,7 @@
 <view class="content_box w710">
     <view class="bg">
         <view class="title flex">
-            <view class="mall_tlt font30" style="{{img}};background-position:-126px -100px;">
+            <view class="mall_tlt font30 sprite" style="background-position:-126px -100px;">
                热门活动
             </view>
         </view>
@@ -106,7 +106,7 @@
                <view class="font28 member_in">会员入驻</view>
             </view>
             <view class="activty_left">
-              <view class="activty_icon" style="{{img}};background-position:0 -100px;"></view>
+              <view class="activty_icon sprite" style="background-position:0 -100px;"></view>
             </view>
           </view>
         </view>
@@ -120,7 +120,7 @@
                <view class="font28 member_in">了解更多</view>
             </view>
             <view class="activty_left">
-              <view class="activty_icon" style="{{img}};background-position:-46px -100px;"></view>
+              <view class="activty_icon sprite" style="background-position:-46px -100px;"></view>
             </view>
           </view>
         </view>
@@ -130,7 +130,7 @@
 <view class="content_box w710 ">
     <view class="bg">
         <view class="title flex">
-            <view class="mall_tlt font30" style="{{img}};background-position:-126px -100px;">
+            <view class="mall_tlt font30 sprite" style="background-position:-126px -100px;" >
                积分兑换
             </view>
             
@@ -150,19 +150,21 @@
 <view style="width:100%;height:160rpx;"></view>
 <view class="navbar">
     <view class="navbar_item" >
-        <view class="nav_img" style="{{img}};background-position:-29px -60px;"></view>
+        <view class="nav_img sprite" style="background-position:-29px -60px;"></view>
         <view class="text this-text">首页</view>
     </view>
     <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/appointment/appointment?id={{web_labelData[0].id}}">
-        <view class="nav_img" style="{{img}};background-position:-56px -60px;"></view>
+        <view class="nav_img sprite" style="background-position:-56px -60px;"></view>
         <view class="text">预约</view>
     </view>
 	<view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/staff/staff">
-	    <view class="nav_img" style="background: url(../../images/navbar3.png) no-repeat 0rpx; background-size:100% ;"></view>
+	    <view class="nav_img">
+			<image src="/images/navbar3.png"></image>
+		</view>
 	    <view class="text">员工</view>
 	</view>
     <view class="navbar_item"   bindtap="intoPathRedirect" data-path="/pages/user/user">
-        <view class="nav_img" style="{{img}};background-position:-108px -60px;"></view>
+        <view class="nav_img sprite" style="background-position:-108px -60px;"></view>
         <view class="text">我的</view>
     </view>
 </view>

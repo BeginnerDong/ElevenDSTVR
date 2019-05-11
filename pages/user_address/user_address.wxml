@@ -24,10 +24,10 @@
 
 			<view class="handle_right flexRowBetween">
 				<view class="edit flex color_this" data-path="/pages/user_address_new/user_address_new?id={{item.id}}" bindtap="intoPath">
-					<view class="edit_icon" style="{{img}};background-position:-212px 0px;"></view> 编辑
+					<view class="edit_icon sprite" style="background-position:-212px 0px;"></view> 编辑
 				</view>
 				<view class="edit flex color_this" data-id="{{item.id}}" bindtap="deleteAddress">
-					<view class="edit_icon" style="{{img}};background-position:-198px 0px;"></view> 删除
+					<view class="edit_icon sprite" style="background-position:-198px 0px;"></view> 删除
 				</view>
 			</view>
 		</view>

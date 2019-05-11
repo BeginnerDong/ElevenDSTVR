@@ -44,14 +44,14 @@
 <view id="buy">
 	<view class="buy_click">
 		<view class="consult collect" data-path="/pages/index/index" bindtap="intoPathRela">
-			<view style="width:19px;height:17px;{{img}};background-position: -88px 0px;margin:0 auto;"></view>
+			<view style="width:19px;height:17px;background-position: -88px 0px;margin:0 auto;" class="sprite"></view>
 			<view class="font28">首页</view>
 		</view>
 	
 			<button class="consult collect"  bindtap="onShareAppMessage"  open-type="share" style="line-height:normal">
-				<view style="width:17px;height:17px;{{img}};background-position: -112px 0px;margin:0 auto;"></view>
+				<view style="width:17px;height:17px;background-position: -112px 0px;margin:0 auto;" class="sprite"></view>
 				<view class="font28">分享</view>
-			</button>
+			</button>sss
 	
 		<view class="go_buy flexRowBetween" bindtap="goBuy">
 			<view class="go_pay bg">
@@ -90,7 +90,7 @@
 					
 				</view>
 				<view class="close" bindtap="close">
-				<view style="width:19px;height:19px;{{img}};background-position:-270px 0;"></view>
+				<view style="width:19px;height:19px;background-position:-270px 0;" class="sprite"></view>
 				</view>
 			</view>
 			<view id="date">

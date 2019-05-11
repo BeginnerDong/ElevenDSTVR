@@ -75,7 +75,7 @@ Page({
 			self.setData({
 				web_mainData: self.data.mainData,
 			});
-
+			self.data.product_no = self.data.mainData.product_no;
 			self.data.complete_api.push('getMainData')
 			self.checkLoadComplete()
 		};
@@ -110,7 +110,6 @@ Page({
 			self.setData({
 				web_orderItemData: self.data.orderItemData,
 			});
-
 			self.data.complete_api.push('getOrderItemData')
 			self.checkLoadComplete()
 		};
@@ -119,6 +118,7 @@ Page({
 
 	getMessageData(isNew) {
 		const self = this;
+		console.log('111',self.data.mainData.product_no)
 		if (isNew) {
 			api.clearPageIndex(self)
 		};
@@ -126,8 +126,8 @@ Page({
 		postData.paginate = api.cloneForm(self.data.paginate);
 		postData.token = wx.getStorageSync('token');
 		postData.searchItem = {
-			product_no: self.data.mainData.product_no,
-			user_type:0
+			product_no:self.data.product_no,
+			user_type:0	
 		};
 		postData.getAfter = {
 			user: {

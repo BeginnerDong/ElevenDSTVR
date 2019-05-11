@@ -26,11 +26,11 @@
 <view id="buy">
 	<view class="buy_click">
 		<view class="consult collect">
-			<view style="width:19px;height:17px;{{img}};background-position: -88px 0px;margin:0 auto;"></view>
+			<view style="width:19px;height:17px;background-position: -88px 0px;margin:0 auto;" class="sprite"></view>
 			<view class="font28">首页</view>
 		</view>
 		<view class="consult collect">
-			<view style="width:17px;height:17px;{{img}};background-position: -112px 0px;margin:0 auto;"></view>
+			<view style="width:17px;height:17px;background-position: -112px 0px;margin:0 auto;" class="sprite"></view>
 			<view class="font28">分享</view>
 		</view>
 		<view class="go_buy flexRowBetween" >

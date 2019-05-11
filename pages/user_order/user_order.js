@@ -15,7 +15,8 @@ Page({
 
   	  order_step:'0'
     },
-    getBefore:{}
+    getBefore:{},
+		buttonCanClick:true
   },
   onLoad(options){
     const self = this;
@@ -28,7 +29,8 @@ Page({
       self.changeSearch(self.data.num);
 
     self.setData({
-      img:app.globalData.img
+      img:app.globalData.img,
+			web_buttonCanClick:self.data.buttonCanClick
     })
   },
 
@@ -86,9 +88,11 @@ Page({
           self.data.isLoadAll = true;
           api.showToast('没有更多了','none');
         };
+				self.data.buttonCanClick = true;
         wx.hideLoading();
         self.setData({
           web_mainData:self.data.mainData,
+					web_buttonCanClick:self.data.buttonCanClick
         });  
       }else{
         api.showToast('网络故障','none')
@@ -137,7 +141,12 @@ Page({
 
 
   menuClick: function (e) {
+		
     const self = this;
+		self.data.buttonCanClick = false;
+		self.setData({
+			web_buttonCanClick:self.data.buttonCanClick
+		});
     const num = e.currentTarget.dataset.num;
     self.changeSearch(num);
   },

@@ -17,43 +17,43 @@
 <view class="user_all font30 color3 w710">
     <view class="w710 bg">
         <view class="user_infor flex"  bindtap="intoPath" data-path="/pages/user_order/user_order">
-            <view class="user_icon" style="{{img}};background-position: -100px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: -100px -30px;"></view>
             <text>我的预约</text>
         </view>
         <view class="user_infor flex"   bindtap="intoPath" data-path="/pages/user_account/user_account">
-            <view class="user_icon" style="{{img}};background-position: -40px -28px;width:18px"></view>
+            <view class="user_icon sprite" style="background-position: -40px -28px;width:18px"></view>
             <text>微信信息</text>
         </view>
         <view class="user_infor flex" style="border: none;" bindtap="intoPath" data-path="/pages/user_member/user_member">
-            <view class="user_icon" style="{{img}};background-position: -62px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: -62px -30px;"></view>
             <text>我的会员</text>
         </view>
     </view>
     <view class="w710 bg">
         <view class="user_infor flex"  bindtap="intoPath" data-path="/pages/user_credit/user_credit">
-            <view class="user_icon" style="{{img}};background-position: 0px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: 0px -30px;"></view>
             <text>我的积分</text>
         </view>
         <view class="user_infor flex"  bindtap="intoPath" data-path="/pages/cashFlow/cashFlow">
-            <view class="user_icon" style="{{img}};background-position: 0px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: 0px -30px;"></view>
             <text>现金流水</text>
         </view>
         <view class="user_infor flex" bindtap="intoPath" data-path="/pages/user_exchange/user_exchange">
-            <view class="user_icon" style="{{img}};background-position: -80px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: -80px -30px;"></view>
             <text>我的兑换</text>
         </view>
         <view class="user_infor flex" style="border: none;" bindtap="intoPath" data-path="/pages/user_address/user_address">
-            <view class="user_icon" style="{{img}};background-position: -19px -30px;"></view>
+            <view class="user_icon sprite" style="background-position: -19px -30px;"></view>
             <text>收货地址</text>
         </view>
     </view>
 	<view class="w710 bg" style="margin-bottom: 100rpx;">
 	    <view class="user_infor flex"  bindtap="intoPath" data-path="/pages/user_user/user_user">
-	        <view class="user_icon" style="background: url(../../images/abous-icon01.png) no-repeat; background-size:100% ;"></view>
+	        <view class="user_icon sprite" style="background: url(../../images/abous-icon01.png) no-repeat; background-size:100% ;"></view>
 	        <text>个人信息</text>
 	    </view>
 		<view class="user_infor flex" style="border: none;" bindtap="intoQy"  data-path="/pages/user_favourable/user_favourable">
-		    <view class="user_icon" style="background: url(../../images/abous-icon02.png) no-repeat; background-size:100% ;"></view>
+		    <view class="user_icon sprite" style="background: url(../../images/abous-icon02.png) no-repeat; background-size:100% ;"></view>
 		    <text>优惠权益</text>
 		</view>
 	        
@@ -63,19 +63,21 @@
 
 <view class="navbar">
     <view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/index/index">
-        <view class="nav_img" style="{{img}};background-position:-0px -60px;"></view>
+        <view class="nav_img sprite" style="background-position:-0px -60px;"></view>
         <view class="text">首页</view>
     </view>
     <view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/appointment/appointment?id={{web_labelData[0].id}}">
-        <view class="nav_img" style="{{img}};background-position:-56px -60px;"></view>
+        <view class="nav_img sprite" style="background-position:-56px -60px;"></view>
         <view class="text">预约</view>
     </view>
 	<view class="navbar_item"   bindtap="intoPathRedi" data-path="/pages/staff/staff">
-	     <view class="nav_img" style="background: url(../../images/navbar3.png) no-repeat 0rpx; background-size:100% ;"></view>
+	    <view class="nav_img">
+			<image src="/images/navbar3.png"></image>
+		</view>
 	    <view class="text">员工</view>
 	</view>
     <view class="navbar_item">
-        <view class="nav_img" style="{{img}};background-position:-135px -60px;"></view>
+        <view class="nav_img sprite" style="background-position:-135px -60px;"></view>
         <view class="text this-text">我的</view>
     </view>
 </view>

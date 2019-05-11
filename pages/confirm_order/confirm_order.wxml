@@ -5,7 +5,7 @@
         <view class="manage_cont">
             <view class="user_address flex color3">
                 <view class="address_left flex">
-                    <view style="width:15px;height:14px;{{img}};background-position:-252px 0px;margin-right:10rpx;"></view>
+                    <view style="width:15px;height:14px;background-position:-252px 0px;margin-right:10rpx;" class="sprite"></view>
                     {{web_addressData.name}}
                 </view>
                 <view class="address_right">
@@ -14,11 +14,11 @@
             </view>
             <view class="address_infor flex">
                 <view class="infor_left flex">
-                    <view style="width:15px;height:14px;{{img}};background-position:-144px 0px;margin-right:10rpx;"></view>
+                    <view style="width:15px;height:14px;background-position:-144px 0px;margin-right:10rpx;" class="sprite"></view>
                 </view>
                 <view class="infor_right avoidOverflow">{{web_addressData.province+web_addressData.city+web_addressData.country+web_addressData.detail}}</view>
                 <view style="width:6%;" bindtap="intoPath" data-path="/pages/user_address/user_address">
-                    <view style="width:9px;height:15px;{{img}};background-position:-40px 0px;"></view>
+                    <view style="width:9px;height:15px;background-position:-40px 0px;" class="sprite"></view>
                 </view>
             </view>
         </view>

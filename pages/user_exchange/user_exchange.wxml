@@ -12,7 +12,7 @@
                             <view class="text  font22 color2" >{{web_startTime}}</view>
                         </view>
                         <view style="width:15%;height:70rpx;" class="flex">
-                            <view class="credit_icon" style="{{img}};background-position:-180px -30px;"></view>
+                            <view class="credit_icon sprite" style="background-position:-180px -30px;"></view>
                         </view>
                     </view> 
                 </picker>
@@ -33,7 +33,7 @@
                             <view class="text  font22 color_this" >{{web_endTime}}</view>
                         </view>
                         <view style="width:15%;height:70rpx;"  class="flex">
-                            <view class="credit_icon" style="{{img}};background-position:-166px -30px;"></view>
+                            <view class="credit_icon sprite" style="background-position:-166px -30px;"></view>
                         </view>
                     </view>
                 </picker>
