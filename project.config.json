@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
-	"appid": "wxad11daecfd18e769",
+	"appid": "wxdd868581ee40a421",
 	"projectname": "%E5%8D%81%E4%B8%80%E7%BB%B4%E6%97%B6%E7%A9%BA",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -142,7 +142,13 @@
 				{
 					"id": -1,
 					"name": "个人信息",
-					"pathName": "pages/user_user/user_user"
+					"pathName": "pages/user_user/user_user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "评论",
+					"pathName": "pages/staff_info/staff_info"
 				}
 			]
 		}

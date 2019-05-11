@@ -51,7 +51,7 @@
 			<button class="consult collect"  bindtap="onShareAppMessage"  open-type="share" style="line-height:normal">
 				<view style="width:17px;height:17px;background-position: -112px 0px;margin:0 auto;" class="sprite"></view>
 				<view class="font28">分享</view>
-			</button>sss
+			</button>
 	
 		<view class="go_buy flexRowBetween" bindtap="goBuy">
 			<view class="go_pay bg">

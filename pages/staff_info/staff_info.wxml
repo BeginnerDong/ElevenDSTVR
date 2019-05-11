@@ -42,8 +42,9 @@
 			</view>
 		</view>
 	</block>
-	<button class="btn_go" bindtap="showTwo">去评论</button>
-
+	<view style="position: fixed; border: 0rpx; height: 120rpx; width: 100%; border-top: solid 1rpx #5C5C5C; bottom: 0rpx; left: 0rpx;">
+		<button class="btn_go" bindtap="showTwo">去评论</button>
+	</view>
 	<view class="dashang" wx:if="{{isShow}}">
 		<view class="fixd_text">打赏金额</view>
 		<input placeholder="请输入打赏金额" style="font-size: 24rpx;" data-key="price" bindblur="changeBindTwo" value="{{web_submitDataTwo.price}}"/>

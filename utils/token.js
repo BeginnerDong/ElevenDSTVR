@@ -24,7 +24,9 @@ class Token {
         var wxUserInfo = {};
         if(wx.canIUse('button.open-type.getUserInfo')){
             wx.getSetting({
+				
                 success: res => {
+					console.log(res)
                     if (res.authSetting['scope.userInfo']) { 
                         wx.getUserInfo({
                             success: function(res) {                  
@@ -37,6 +39,7 @@ class Token {
                     }
                 },
                 fail: res=>{
+					console.log(res)
                     wx.showToast({
                         title:'拉取微信失败',
                         icon:'fail',
