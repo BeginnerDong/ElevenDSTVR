@@ -14,7 +14,7 @@
 				<image src="{{item.user[0].headImgUrl}}" style="width: 80rpx; height:80rpx ;border-radius:50%; margin: 30rpx 11rpx 40rpx;"></image>
 			</block>
 		</view>
-		<view class="inblock" style="width: 13%; float: right;margin-top: 20rpx;">
+		<view class="inblock" style="width: 13%; float: right;margin-top: 30rpx;">
 			<image src="../../images/appointment-icon2.png" style="width: 15rpx; height: 26rpx;float: right;"  bindtap="intoPath" data-path="/pages/head_img/head_img"></image>
 			<view style="clear: both;"></view>
 		</view>
@@ -46,7 +46,7 @@
 			</view>
 		</view>
 	</block>
-	<view style="position: fixed; border: 0rpx; height: 120rpx; width: 100%; border-top: solid 1rpx #5C5C5C; bottom: 0rpx; left: 0rpx;">
+	<view style="position: fixed; border:none; height: 120rpx; width: 100%;bottom: 0rpx; left: 0rpx;">
 		<button class="btn_go" bindtap="showTwo">去评论</button>
 	</view>
 	<view class="dashang" wx:if="{{isShow}}">

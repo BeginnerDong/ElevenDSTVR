@@ -96,14 +96,14 @@
 }
 .btn_go{
 	background: #3AB3C3;
-	width: 538rpx;
+	width: 80%;
 	height: 80rp;
 	color:#fff;
 	line-height: 80rpx;
 	text-align: center;
 	font-size: 32rpx;
 	border-radius:50rpx ;
-	margin: 2.6% auto;
+	margin: 2% auto;
 }
 
 
