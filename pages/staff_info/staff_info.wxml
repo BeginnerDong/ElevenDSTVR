@@ -15,9 +15,10 @@
 			</block>
 		</view>
 		<view class="inblock" style="width: 13%; float: right;margin-top: 30rpx;">
-			<image src="../../images/appointment-icon2.png" style="width: 15rpx; height: 26rpx;float: right;"  bindtap="intoPath" data-path="/pages/head_img/head_img"></image>
+			<image src="../../images/appointment-icon2.png" style="width: 15rpx; height: 26rpx;float: right;"  bindtap="intoPath" data-path="/pages/head_img/head_img?id={{web_mainData.id}}"></image>
 			<view style="clear: both;"></view>
 		</view>
+		
 		<button bindtap="show">打赏</button>
 	</view>
 	<view class="comment">

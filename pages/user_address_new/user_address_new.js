@@ -8,15 +8,15 @@ Page({
 
 
   data: {
-    region: ['陕西省', '西安市', '雁塔区'],
-    sForm:{
-      name:'',
-      latitude:'',
-      longitude:'',
-      phone:'',
-      detail:'',
+    sForm: {
+    	name: '',
+    	phone: '',
+    	detail: '',
+    	city: '',
+    
     },
-    id:'',
+    region: '',
+    id: '',
   },
 
   onLoad(options) {
@@ -72,16 +72,15 @@ Page({
     });  
   },
 
-  bindRegionChange: function (e) {
-    const self = this;
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    self.data.sForm.province = e.detail.value[0];
-    self.data.sForm.city = e.detail.value[1];
-    self.data.sForm.country = e.detail.value[2];
-    self.setData({
-      web_region: e.detail.value
-    })
-  },
+	bindRegionChange(e) {
+		const self = this;
+		console.log('picker发送选择改变，携带值为', e.detail.value)
+		self.data.region = e.detail.value.join('');
+		self.data.sForm.city = self.data.region;
+		this.setData({
+			web_region: self.data.region
+		})
+	},	
 
 
   addressUpdate(){
@@ -140,31 +139,7 @@ Page({
     };
   },
 
-  chooseLocation:function(e){
-    var self = this;
-    wx.chooseLocation({
-      success: function(res){
-        self.data.sForm.detail = res.address,
-        self.data.sForm.longitude = res.longitude,
-        self.data.sForm.latitude = res.latitude,
-        self .setData({
-          hasLocation:true,
-          location:{
-            longitude:res.longitude,
-            latitude:res.latitude
-          },
-          web_mainData:self.data.sForm,
-          web_name:res.name,
-        })
-      },
-      fail: function() {
-      // fail
-      },
-      complete: function() {
-      // complete
-      }
-    })
-  },
+  
 
 
 

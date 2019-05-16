@@ -258,7 +258,7 @@ Page({
     self.setData({
       web_buttonCanClick:self.data.buttonCanClick
     });
-
+	
     if(self.data.dayLimit>=parseInt(self.data.skuData.standard)){
       api.showToast('该时段今日已预约满','none');
       self.data.buttonCanClick = true ;
@@ -281,6 +281,9 @@ Page({
           express_info:self.data.skuData.id
         }
       };
+			if(self.data.specialData.msg.special=='true'){
+				postData.data.special_offer = 2
+			};
       console.log(postData)
       const callback = (res)=>{
         self.data.order_id = res.info.id;

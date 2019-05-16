@@ -1,58 +1,18 @@
 <view class="w710">
 	<view class="list" style="border-bottom: solid 1rpx #666666;">
 		<view class="head inblock">
-			<image src="../../images/img.png"></image>
+			<image src="{{web_mainData.mainImg[0].url}}"></image>
 		</view>
 		<view class="name">
-			昵称昵称
+			{{web_mainData.title}}
 		</view>
 	</view>
-	<view class="num">1254人打赏</view>
+	<view class="num">{{web_orderItemData.length}}人打赏</view>
 </view>
 <view>
+	<block wx:for="{{web_orderItemData}}" wx:key="id">
 		<view class="smbox">
-			<image src="../../images/img.png"></image>
+			<image src="{{item.user[0].headImgUrl}}"></image>
 		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-		<view class="smbox">
-			<image src="../../images/img.png"></image>
-		</view>
-	</view>
+	</block>
+</view>

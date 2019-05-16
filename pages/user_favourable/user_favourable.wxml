@@ -1,6 +1,6 @@
 <view class="user_all font30 color3 w710 fang">
 	<view class="blackbox" style="text-align: center;">
-		<view class="mnoey" bindtap="test">{{web_specialData.msg.consume}}</view>
+		<view class="mnoey">{{web_specialData.msg.consume}}</view>
 		<view class="mon-text">元</view>
 		<view class="mon-text text2">消费金额</view>
 	</view>
@@ -16,5 +16,5 @@
 	<view class="mon-text text3">
 		本周期还剩<view class="mnoey">{{web_specialData.msg.restDay}}</view>天
 	</view>
-	<button class="btn_go">去预约</button>
+	<button class="btn_go" bindtap="intoPathRedirect" data-path="/pages/appointment/appointment?id={{web_labelData[0].id}}">去预约</button>
 </view>

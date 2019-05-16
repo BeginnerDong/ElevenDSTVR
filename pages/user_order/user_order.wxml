@@ -36,7 +36,10 @@
             <view class="product_right">
                 <view class="product_detail">
                     <view class="font32  product_top flex">
-                        <view class="product_name">{{item.store[0].title}}</view><view class="product_price color2">¥{{item.price}}</view></view>
+                        <view class="product_name">{{item.store[0].title}}</view><view class="product_price color2">
+						¥{{item.special_offer==2?item.products[0].snap_product.specialPrice:item.products[0].snap_product.price}}
+						</view>
+					</view>
                     <view class="font28 avoidOverflow product_address flex">{{item.store[0].description}}</view>
                     <view class="font28 flex"><text>{{item.passage1}}</text></view>
                 </view>

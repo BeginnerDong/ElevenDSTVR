@@ -85,6 +85,12 @@ Page({
 	getOrderItemData() {
 		const self = this;
 		const postData = {};
+		postData.paginate = {
+			count: 0,
+			currentPage:1,
+			pagesize:6,
+			is_page:true,
+		},
 		postData.token = wx.getStorageSync('token');
 		postData.searchItem = {
 
